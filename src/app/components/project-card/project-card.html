@@ -1,0 +1,25 @@
+<a class="project-card" [href]="project.url">
+  <div class="overlay-wrap">
+
+    <div class="media ratio-16-9">
+      <img
+        [src]="project.image"
+        [alt]="project.title"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="overlay">
+      <div class="overlay-titles">
+        <h3 class="text-title">
+          {{ project.title }}
+        </h3>
+
+        <span class="project-type">
+          {{ project.category }}
+        </span>
+      </div>
+    </div>
+
+  </div>
+</a>z

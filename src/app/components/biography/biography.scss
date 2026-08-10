@@ -1,0 +1,81 @@
+// components/biography/biography.component.scss
+
+/* ========================================
+   BIOGRAPHY
+   ======================================== */
+
+.biography {
+  margin-top: 80px;
+}
+
+.bordered-title {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+}
+
+.bordered-title span {
+  position: relative;
+  top: -8px;
+  background: var(--white);
+  padding: 0 14px;
+  font-size: 13px;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  letter-spacing: .01em;
+}
+
+.biography-content {
+  max-width: 760px;
+  margin: 65px auto 100px;
+  padding-inline: var(--page-padding);
+  text-align: center;
+}
+
+.biography-content h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  letter-spacing: .01em;
+}
+
+.bio-text {
+  font-size: 14px;
+  line-height: 1.45;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  letter-spacing: .01em;
+}
+
+.bio-text p {
+  margin-bottom: 18px;
+}
+
+.bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 600px) {
+  .biography {
+    margin-top: 55px;
+  }
+
+  .biography-content {
+    margin: 45px auto 70px;
+  }
+
+  .biography-content h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .bio-text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,38 @@
+/* FILTERS */
+
+.tags {
+  margin-bottom: 38px;
+}
+
+.tags ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.tags li {
+  position: relative;
+}
+
+.tags li:not(:last-child)::after {
+  content: "/";
+  margin: 0 7px;
+}
+
+.tags button,
+.tags a {
+  font-family: futura-pt, Helvetica, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.tags button {
+  transition: opacity .25s ease;
+}
+
+.tags button:hover,
+.tags button.active,
+.tags a:hover {
+  opacity: .45;
+}

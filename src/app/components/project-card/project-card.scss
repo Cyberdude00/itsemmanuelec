@@ -1,0 +1,137 @@
+// components/project-card/project-card.component.scss
+
+/* ========================================
+   PROJECT CARD
+   ======================================== */
+
+.project-card {
+  display: block;
+}
+
+.overlay-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.media {
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+}
+
+.ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .8s cubic-bezier(.2,.6,.2,1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  opacity: 0;
+  transition: opacity .4s ease, background .4s ease;
+}
+
+.overlay-titles {
+  color: var(--white);
+  text-align: center;
+  transform: translateY(10px);
+  transition: transform .4s ease;
+}
+
+.overlay h3 {
+  font-size: 17px;
+  line-height: 1.05;
+}
+
+.project-type {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.project-info {
+  padding: 8px 0 14px;
+}
+
+.project-info h3 {
+  font-family: var(--font-title);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.project-info span {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* TAGS (si los usas dentro del card) */
+.tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background: var(--border);
+  border-radius: 4px;
+}
+
+/* ========================================
+   HOVERS
+   ======================================== */
+
+.overlay-wrap:hover .overlay {
+  opacity: 1;
+  background: rgba(0, 0, 0, .78);
+}
+
+.overlay-wrap:hover .overlay-titles {
+  transform: translateY(0);
+}
+
+.overlay-wrap:hover img {
+  transform: scale(1.025);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 600px) {
+  .overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,.55), transparent 55%);
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 14px;
+  }
+
+  .overlay-titles {
+    transform: none;
+    text-align: left;
+  }
+
+  .overlay h3 {
+    font-size: 15px;
+  }
+
+  .tags ul {
+    line-height: 2;
+  }
+}

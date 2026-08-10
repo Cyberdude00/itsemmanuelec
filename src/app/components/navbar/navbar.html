@@ -1,0 +1,30 @@
+<!-- navbar.html -->
+
+<header class="main-header">
+  <div class="capped">
+
+    <ul class="main-menu">
+      <!-- Izquierda -->
+      <li><a href="#work">Work</a></li>
+      <li><a href="#biography">About</a></li>
+
+      <!-- Centro -->
+      <li class="location">MX | NY</li>
+
+      <!-- Derecha -->
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://instagram.com/" target="_blank">Socials</a></li>
+    </ul>
+
+    <!-- Logo abajo centrado -->
+    <div class="bottom-row">
+      <a href="/" class="logo">Emmanuel Echavarría</a>
+    </div>
+
+  </div>
+</header>
+
+<app-mobile-menu
+  [open]="menuOpen"
+  (closed)="menuOpen = false">
+</app-mobile-menu>

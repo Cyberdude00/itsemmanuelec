@@ -1,0 +1,45 @@
+<div
+  class="mobile-menu"
+  [class.is-open]="open">
+
+  <div class="mobile-menu-inner">
+
+    <button
+      class="close-menu text-title"
+      (click)="closed.emit()">
+      Close
+    </button>
+
+    <ul class="text-title">
+
+      <li>
+        <a href="#work" (click)="closed.emit()">
+          Work
+        </a>
+      </li>
+
+      <li>
+        <a href="#biography" (click)="closed.emit()">
+          Biography
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact" (click)="closed.emit()">
+          Contact
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://instagram.com/"
+          target="_blank">
+          Instagram
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>

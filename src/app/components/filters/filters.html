@@ -1,0 +1,45 @@
+<div class="tags">
+
+  <ul>
+
+    <li>
+      <button
+        [class.active]="active === 'commercial'"
+        (click)="filter('commercial')">
+        Commercial
+      </button>
+    </li>
+
+    <li>
+      <button
+        [class.active]="active === 'music-video'"
+        (click)="filter('music-video')">
+        Music Video
+      </button>
+    </li>
+
+    <li>
+      <button
+        [class.active]="active === 'film'"
+        (click)="filter('film')">
+        Film
+      </button>
+    </li>
+
+    <li>
+      <a href="#biography">
+        Biography
+      </a>
+    </li>
+
+    <li>
+      <button
+        [class.active]="active === 'all'"
+        (click)="filter('all')">
+        View All
+      </button>
+    </li>
+
+  </ul>
+
+</div>
