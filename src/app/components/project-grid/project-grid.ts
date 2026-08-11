@@ -14,15 +14,33 @@ import {
 export class ProjectGrid {
   projects: Project[] = [
     {
-      title: 'PROJECT ONE',
+      title: 'SHEIN',
       category: 'Commercial',
       image: 'assets/projects/project-01.jpg',
       url: '#'
     },
     {
-      title: 'PROJECT TWO',
+      title: 'NIKE',
       category: 'Music Video',
       image: 'assets/projects/project-02.jpg',
+      url: '#'
+    },
+    {
+      title: 'ALEXANDER WANG',
+      category: 'Film',
+      image: 'assets/projects/project-03.jpg',
+      url: '#'
+    },
+    {
+      title: 'RELEASE',
+      category: 'Film',
+      image: 'assets/projects/project-03.jpg',
+      url: '#'
+    },
+    {
+      title: 'COEVAL MAGAZINE',
+      category: 'Film',
+      image: 'assets/projects/project-03.jpg',
       url: '#'
     },
     {

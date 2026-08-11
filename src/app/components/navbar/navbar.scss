@@ -46,6 +46,11 @@
   transition: opacity .3s ease;
 }
 
+.logo-muted {
+  color: var(--gray);
+  
+}
+
 .logo:hover {
   opacity: .45;
 }
