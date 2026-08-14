@@ -1,39 +1,50 @@
 <div
   class="mobile-menu"
-  [class.is-open]="open">
+  [class.is-open]="open"
+  [attr.aria-hidden]="!open">
 
   <div class="mobile-menu-inner">
 
     <button
+      type="button"
       class="close-menu text-title"
       (click)="closed.emit()">
+
       Close
+
     </button>
 
     <ul class="text-title">
 
       <li>
-        <a href="#work" (click)="closed.emit()">
+        <a
+          href="#work"
+          (click)="closed.emit()">
           Work
         </a>
       </li>
 
       <li>
-        <a href="#biography" (click)="closed.emit()">
+        <a
+          href="#biography"
+          (click)="closed.emit()">
           Biography
         </a>
       </li>
 
       <li>
-        <a href="#contact" (click)="closed.emit()">
+        <a
+          href="#contact"
+          (click)="closed.emit()">
           Contact
         </a>
       </li>
 
       <li>
         <a
-          href="https://instagram.com/"
-          target="_blank">
+          href="https://www.instagram.com/itsemmanuelec/"
+          target="_blank"
+          rel="noopener noreferrer">
           Instagram
         </a>
       </li>

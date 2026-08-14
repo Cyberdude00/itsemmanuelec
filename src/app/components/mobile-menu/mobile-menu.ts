@@ -1,4 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -7,6 +12,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './mobile-menu.scss'
 })
 export class MobileMenu {
+
   @Input() open = false;
+
   @Output() closed = new EventEmitter<void>();
+
 }

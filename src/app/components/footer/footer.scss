@@ -1,26 +1,28 @@
-// components/footer/footer.component.scss
-
+.site-footer .capped {
+  width: 100%;
+  max-width: none;
+}
 .site-footer {
-  border-top: 1px solid var(--border);
-  padding-block: 20px 35px;
+  margin-bottom: 30px;
 }
 
 .footer-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: clamp(50px, 21vw, 700px);
+  width: 100%;
+  padding-inline: 40px;
+  gap: 0;
+
   font-family: var(--font-title);
   font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .01em;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  marggin:50px
+
 }
 
 .footer-grid a {
   transition: opacity .3s ease;
-  text-decoration: none;
-  color: inherit;
   white-space: nowrap;
 }
 
@@ -32,14 +34,7 @@
   margin-top: 80px;
   text-align: center;
   font-size: 11px;
-  font-family: var(--font-title);
-  text-transform: uppercase;
-  letter-spacing: .01em;
 }
-
-/* ========================================
-   RESPONSIVE
-   ======================================== */
 
 @media (max-width: 768px) {
   .footer-grid {

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -7,9 +11,16 @@ import { Component } from '@angular/core';
   styleUrl: './filters.scss'
 })
 export class Filters {
+
   active = 'all';
 
+  @Output()
+  categoryChange = new EventEmitter<string>();
+
   filter(category: string): void {
+
     this.active = category;
+
+    this.categoryChange.emit(category);
   }
 }

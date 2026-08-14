@@ -1,31 +1,56 @@
-<!-- navbar.html -->
-
 <header class="main-header">
   <div class="capped">
 
-    <ul class="main-menu">
-      <!-- Izquierda -->
-      <li><a href="#work">Work</a></li>
-      <li><a href="#biography">About</a></li>
+    <div class="desktop-menu">
+      <ul class="main-menu">
 
-      <!-- Centro -->
-      <li class="location">MX | NY</li>
+        <li>
+          <a href="#work">Work</a>
+        </li>
 
-      <!-- Derecha -->
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://instagram.com/" target="_blank">Socials</a></li>
-    </ul>
+        <li>
+          <a href="#biography">About</a>
+        </li>
 
-  <div class="bottom-row">
-    <a href="/" class="logo">
-      <span class="logo-muted">its </span><span>emmanuel ec</span><span class="logo-muted">havarria</span>
-    </a>
-  </div>
+        <li class="name">
+          <span class="logo-muted">its</span> emmanuel ec<span class="logo-muted">havarria</span>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.instagram.com/itsemmanuelec/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Socials
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="mobile-header">
+      <button
+        type="button"
+        class="menu-trigger"
+        (click)="toggleMenu()">
+        Menu
+      </button>
+    </div>
+
+    <div class="bottom-row">
+      <span class="location">
+        MX | NY
+      </span>
+    </div>
 
   </div>
 </header>
 
 <app-mobile-menu
   [open]="menuOpen"
-  (closed)="menuOpen = false">
+  (closed)="toggleMenu()">
 </app-mobile-menu>

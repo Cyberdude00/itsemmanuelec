@@ -1,125 +1,292 @@
-// components/project-card/project-card.component.scss
-
-/* ========================================
-   PROJECT CARD
-   ======================================== */
-
 .project-card {
-  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 0;
 }
 
-.overlay-wrap {
+.project-card.is-expanded {
+  grid-column: 1 / -1;
+}
+
+.preview {
   position: relative;
+  width: 100%;
   overflow: hidden;
+  background: #000;
+  cursor: pointer;
 }
 
 .media {
   position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #eee;
+  background: #000;
 }
 
-.ratio-16-9 {
-  aspect-ratio: 16 / 9;
+.media img,
+.media iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .8s cubic-bezier(.2,.6,.2,1);
+  object-fit: contain;
+  background: #000;
 }
+
+.video-thumbnail {
+  object-fit: cover !important;
+}
+
+.media iframe {
+  pointer-events: auto;
+}
+
+
+/* OVERLAY */
 
 .overlay {
   position: absolute;
   inset: 0;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: transparent;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, .72);
+
   opacity: 0;
-  transition: opacity .4s ease, background .4s ease;
+
+  transition: opacity .35s ease;
+
+  pointer-events: none;
 }
 
 .overlay-titles {
-  color: var(--white);
+  color: white;
   text-align: center;
+
   transform: translateY(10px);
-  transition: transform .4s ease;
+
+  transition: transform .35s ease;
 }
 
 .overlay h3 {
+  margin: 0;
+
+  font-family: var(--font-title);
   font-size: 17px;
   line-height: 1.05;
-}
-
-.project-type {
-  display: block;
-  margin-top: 6px;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-
-.project-info {
-  padding: 8px 0 14px;
-}
-
-.project-info h3 {
-  font-family: var(--font-title);
-  font-size: 13px;
   font-weight: 400;
+
   text-transform: uppercase;
 }
 
-.project-info span {
-  font-size: 11px;
+.overlay span {
+  display: block;
+
+  margin-top: 6px;
+
+  font-family: var(--font-title);
+  font-size: 10px;
+
   text-transform: uppercase;
 }
 
-/* TAGS (si los usas dentro del card) */
-.tags ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tags li {
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  background: var(--border);
-  border-radius: 4px;
-}
-
-/* ========================================
-   HOVERS
-   ======================================== */
-
-.overlay-wrap:hover .overlay {
+.preview:hover .overlay {
   opacity: 1;
-  background: rgba(0, 0, 0, .78);
 }
 
-.overlay-wrap:hover .overlay-titles {
+.preview:hover .overlay-titles {
   transform: translateY(0);
 }
 
-.overlay-wrap:hover img {
-  transform: scale(1.025);
+
+/* CAROUSEL */
+
+.carousel-button {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  width: 36px;
+  height: 36px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, .55);
+
+  color: white;
+
+  font-size: 27px;
+  line-height: 30px;
+
+  opacity: 0;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
 }
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+.preview:hover .carousel-button {
+  opacity: 1;
+}
+
+.carousel-button:hover {
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+.carousel-button.previous {
+  left: 12px;
+}
+
+.carousel-button.next {
+  right: 12px;
+}
+
+.carousel-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 12px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 5px;
+
+  z-index: 10;
+}
+
+.carousel-dots button {
+  width: 5px;
+  height: 5px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, .5);
+}
+
+.carousel-dots button.active {
+  background: white;
+}
+
+
+/* EXPANDED */
+
+.is-expanded .preview {
+  cursor: default;
+}
+
+.is-expanded .media {
+  aspect-ratio: auto;
+
+  min-height: 75vh;
+
+  background: #000;
+}
+
+.is-expanded .media img {
+  object-fit: contain;
+}
+
+.is-expanded .media iframe {
+  width: 100%;
+  height: 75vh;
+}
+
+.expanded-info {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 12px 0 20px;
+
+  font-family: var(--font-title);
+}
+
+.expanded-info h2 {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.expanded-info span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+}
+
+.viewer-close {
+  border: 0;
+  padding: 0;
+
+  background: none;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: opacity .3s ease;
+}
+
+.viewer-close:hover {
+  opacity: .45;
+}
+
+
+/* MOBILE */
 
 @media (max-width: 600px) {
+
+  .project-card.is-expanded {
+    grid-column: 1;
+  }
+
+  .is-expanded .media {
+    min-height: 60vh;
+  }
+
+  .is-expanded .media iframe {
+    height: 60vh;
+  }
+
   .overlay {
     opacity: 1;
-    background: linear-gradient(to top, rgba(0,0,0,.55), transparent 55%);
+
     align-items: flex-end;
     justify-content: flex-start;
+
     padding: 14px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, .65),
+        transparent 60%
+      );
   }
 
   .overlay-titles {
@@ -127,11 +294,8 @@
     text-align: left;
   }
 
-  .overlay h3 {
-    font-size: 15px;
+  .carousel-button {
+    opacity: 1;
   }
 
-  .tags ul {
-    line-height: 2;
-  }
 }

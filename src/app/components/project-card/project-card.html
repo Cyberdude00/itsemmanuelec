@@ -1,25 +1,165 @@
-<a class="project-card" [href]="project.url">
-  <div class="overlay-wrap">
+<div
+  class="project-card"
+  [class.is-expanded]="isViewerOpen">
 
-    <div class="media ratio-16-9">
-      <img
-        [src]="project.image"
-        [alt]="project.title"
-        loading="lazy"
-      />
+  <div
+    class="preview"
+    (click)="openViewer()">
+
+    <div class="media">
+
+      @if (!isViewerOpen) {
+
+        @if (current.type === 'image') {
+
+          <img
+            [src]="current.url"
+            [alt]="project.title"
+            loading="lazy">
+
+        }
+
+        @if (current.type === 'video') {
+
+          <img
+            class="video-thumbnail"
+            [src]="current.thumbnail || getBunnyThumbnail(current.url)"
+            [alt]="project.title"
+            loading="lazy">
+
+        }
+
+      } @else {
+
+        @if (current.type === 'image') {
+
+          <img
+            [src]="current.url"
+            [alt]="project.title">
+
+        }
+
+        @if (current.type === 'video') {
+
+          <iframe
+            [src]="safeVideoUrl"
+            [title]="project.title"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+        }
+
+      }
+
     </div>
 
-    <div class="overlay">
-      <div class="overlay-titles">
-        <h3 class="text-title">
-          {{ project.title }}
-        </h3>
 
-        <span class="project-type">
-          {{ project.category }}
-        </span>
+    @if (!isViewerOpen) {
+
+      <div class="overlay">
+
+        <div class="overlay-titles">
+
+          <h3>
+            {{ project.title }}
+          </h3>
+
+          @if (project.subtitle) {
+
+            <span>
+              {{ project.subtitle }}
+            </span>
+
+          }
+
+        </div>
+
       </div>
-    </div>
+
+
+      @if (project.media.length > 1) {
+
+        <button
+          type="button"
+          class="carousel-button previous"
+          (click)="previous($event)"
+          aria-label="Previous">
+
+          ‹
+
+        </button>
+
+
+        <button
+          type="button"
+          class="carousel-button next"
+          (click)="next($event)"
+          aria-label="Next">
+
+          ›
+
+        </button>
+
+
+        <div class="carousel-dots">
+
+          @for (
+            item of project.media;
+            track $index
+          ) {
+
+            <button
+              type="button"
+              [class.active]="$index === currentMedia"
+              (click)="selectMedia($index, $event)"
+              aria-label="Select media">
+            </button>
+
+          }
+
+        </div>
+
+      }
+
+    }
 
   </div>
-</a>
+
+
+  @if (isViewerOpen) {
+
+    <div class="expanded-info">
+
+      <div>
+
+        <h2>
+          {{ project.title }}
+        </h2>
+
+        @if (project.subtitle) {
+
+          <span>
+            {{ project.subtitle }}
+          </span>
+
+        }
+
+      </div>
+
+
+      <button
+        type="button"
+        class="viewer-close"
+        (click)="closeViewer()"
+        aria-label="Close">
+
+        ×
+
+      </button>
+
+    </div>
+
+  }
+
+</div>
