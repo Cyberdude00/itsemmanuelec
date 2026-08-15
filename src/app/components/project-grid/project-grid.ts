@@ -1,3 +1,9 @@
+
+
+
+
+
+
 import { Component } from '@angular/core';
 
 import {
@@ -16,7 +22,6 @@ import {
 export class ProjectGrid {
 
   projects: Project[] = [
-    
 
     {
       title: 'RELEASE',
@@ -32,7 +37,6 @@ export class ProjectGrid {
       ]
     },
     
-
     {
       title: 'COEVAL MAGAZINE',
       subtitle: 'FALLING',
@@ -46,8 +50,6 @@ export class ProjectGrid {
         }
       ]
     },
-    
-
     {
       title: 'SHOWPONY',
       subtitle: 'CAMPAIGN',
@@ -61,48 +63,41 @@ export class ProjectGrid {
         }
       ]
     },
-    
-    
     {
-      title: 'SHEIN',
-      subtitle: 'MOTF',
-      category: 'Film',
-      media: [
-        {
-          type: 'video',
-          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699841/MOFT_3_ae9fig.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_081740_xr7ezk.png'
-        }
-      ]
-    },
+    title: 'ALEXANDER WANG',
+    subtitle: 'FW',
+    category: 'Film',
+    media: [
       {
-      title: 'SHEIN',
-      subtitle: 'MOTF',
-      category: 'Film',
-      media: [
+        type: 'image',
+        url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699820/Alexander_Wang_FW_2_bx8wul.jpg'
+      },
+    ]
+    },
+    {
+    title: 'ALEXANDER WANG',
+    subtitle: 'FW',
+    category: 'Campaign',
+    media: [
+      {
+        type: 'video',
+        url: 'https://player.mediadelivery.net/play/727165/d1d1911a-f2bd-486c-8d2b-c6de2338bb1d',
+        thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_082000_bjlsya.png'
+      }
+    ]
+    },
+    {
+    title: 'ALEXANDER WANG',
+    subtitle: 'FW',
+    category: 'Film',
+    media: [
         {
-          type: 'video',
-          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699831/MOFT_2_olroqz.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786763700/Captura_de_pantalla_2026-08-15_091933_qkz3ph.png'
+          type: 'image',
+          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Alexander_Wang_FW_3_mvzmcu.jpg'
         }
       ]
     },
-        {
-      title: 'SHEIN',
-      subtitle: 'MOTF',
-      category: 'Film',
-      media: [
-        {
-          type: 'video',
-          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699831/MOFT_1_znc7sa.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_081715_awn4am.png'
-        }
-      ]
-    },
-
+    
     {
       title: 'NIKE',
       subtitle: 'PEARL',
@@ -138,7 +133,7 @@ export class ProjectGrid {
         }
       ]
     },
-
+    
     {
       title: 'JORDAN',
       subtitle: 'GAMMA',
@@ -146,7 +141,9 @@ export class ProjectGrid {
       media: [
         {
           type: 'image',
-          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Jordan_Gamma_2_dqejgw.jpg'
+          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Jordan_Gamma_2_dqejgw.jpg'          
+          //thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753461/Captura_de_pantalla_2026-08-15_082117_dqowzo.png'
+
         }
       ]
     },
@@ -160,7 +157,7 @@ export class ProjectGrid {
           type: 'video',
           //url: 'https://player.mediadelivery.net/play/727165/6a7e7d70-497f-4969-a5b6-3c91fbf11d50',
           url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699823/Jordan_Gamma_1_ul4r50.mp4',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753461/Captura_de_pantalla_2026-08-15_082117_dqowzo.png'
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786800245/Captura_de_pantalla_2026-08-15_212323_tc3qbo.png' 
         }
       ]
     },
@@ -173,53 +170,90 @@ export class ProjectGrid {
       media: [
         {
           type: 'video',
-          url: 'https://player.mediadelivery.net/play/727165/8e98cdb3-01a7-48b6-b873-7a8789119c5b'
-          // thumbnail: 'AQUI_PONES_LA_URL_DE_TU_IMAGEN'
+          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753464/Captura_de_pantalla_2026-08-15_082158_ux2fow.png',
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753464/Captura_de_pantalla_2026-08-15_082158_ux2fow.png' 
         }
       ]
     },
     {
-      title: 'ALEXANDER WANG',
-      subtitle: 'FALL',
-      category: 'Campaign',
+      title: 'SHEIN',
+      subtitle: 'MOTF',
+      category: 'Film',
       media: [
         {
           type: 'video',
-          url: 'https://player.mediadelivery.net/play/727165/d1d1911a-f2bd-486c-8d2b-c6de2338bb1d',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_082000_bjlsya.png'
-        }
-      ]
-    },
-    {
-      title: 'ALEXANDER WANG',
-      subtitle: 'FW',
-      category: 'Film',
-      media: [
-        {
-          type: 'image',
-          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Alexander_Wang_FW_3_mvzmcu.jpg'
+          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699841/MOFT_3_ae9fig.mp4',
+          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_081740_xr7ezk.png'
         }
       ]
     },
         {
-      title: 'ALEXANDER WANG',
-      subtitle: 'FW',
+      title: 'SHEIN',
+      subtitle: 'MOTF',
       category: 'Film',
       media: [
         {
-          type: 'image',
-          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699820/Alexander_Wang_FW_2_bx8wul.jpg'
+          type: 'video',
+          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699831/MOFT_1_znc7sa.mp4',
+          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_081715_awn4am.png'
         }
       ]
-    }
-    
-  ];
+    },
+      {
+      title: 'SHEIN',
+      subtitle: 'MOTF',
+      category: 'Film',
+      media: [
+        {
+          type: 'video',
+          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699831/MOFT_2_olroqz.mp4',
+          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786763700/Captura_de_pantalla_2026-08-15_091933_qkz3ph.png'
+        }
+      ]
+      }  
+  ]
 
 
   filteredProjects = this.projects;
 
+  expandedProject: Project | null = null;
+
+
+  openProject(project: Project): void {
+    this.expandedProject = project;
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+
+  closeProject(): void {
+    this.expandedProject = null;
+  }
+
+
+  getRemainingProjects(): Project[] {
+
+    if (!this.expandedProject) {
+      return this.filteredProjects;
+    }
+
+    return this.filteredProjects.filter(
+      project => project !== this.expandedProject
+    );
+  }
+
 
   setFilter(category: string): void {
+
+    this.expandedProject = null;
 
     if (category === 'all') {
 
@@ -227,9 +261,7 @@ export class ProjectGrid {
         this.projects;
 
       return;
-
     }
-
 
     this.filteredProjects =
       this.projects.filter(
@@ -237,7 +269,6 @@ export class ProjectGrid {
           project.category.toLowerCase() ===
           category.toLowerCase()
       );
-
   }
 
 }
