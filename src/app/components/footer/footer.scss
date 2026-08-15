@@ -2,8 +2,9 @@
   width: 100%;
   max-width: none;
 }
+
 .site-footer {
-  margin-bottom: 30px;
+  margin-bottom: 50x;
 }
 
 .footer-grid {
@@ -13,12 +14,9 @@
   width: 100%;
   padding-inline: 40px;
   gap: 0;
-
   font-family: var(--font-title);
   font-size: 13px;
   flex-wrap: nowrap;
-  marggin:50px
-
 }
 
 .footer-grid a {
@@ -29,6 +27,7 @@
 .footer-grid a:hover {
   opacity: .45;
 }
+
 
 .footer-bottom {
   margin-top: 80px;
@@ -52,4 +51,8 @@
     margin-top: 50px;
     font-size: 10px;
   }
+}
+
+.site-footer .footer-grid a {
+  margin-right: 70px;
 }
