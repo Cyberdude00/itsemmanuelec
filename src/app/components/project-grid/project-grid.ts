@@ -38,7 +38,7 @@ export class ProjectGrid {
     },
     
     {
-      title: 'COEVAL MAGAZINE',
+      title: 'COEVAL',
       subtitle: 'FALLING',
       category: 'Editorial',
       media: [
@@ -81,7 +81,8 @@ export class ProjectGrid {
     media: [
       {
         type: 'video',
-        url: 'https://player.mediadelivery.net/play/727165/d1d1911a-f2bd-486c-8d2b-c6de2338bb1d',
+        url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_082000_bjlsya.png',
+        //url: 'https://player.mediadelivery.net/play/727165/d1d1911a-f2bd-486c-8d2b-c6de2338bb1d',
         thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_082000_bjlsya.png'
       }
     ]
@@ -118,13 +119,14 @@ export class ProjectGrid {
       media: [
         {
           type: 'image',
-          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699823/Jordan_Pearl_4_dsjrj3.jpg'
+          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699823/Jordan_Pearl_4_dsjrj3.jpg',
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699823/Jordan_Pearl_4_dsjrj3.jpg'
         }
       ]
     },
     {
       title: 'NIKE',
-      subtitle: 'PARL',
+      subtitle: 'PEARL',
       category: 'Campaign',
       media: [
         {
@@ -140,7 +142,7 @@ export class ProjectGrid {
       category: 'Film',
       media: [
         {
-          type: 'image',
+          type: 'video',
           url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Jordan_Gamma_2_dqejgw.jpg'          
           //thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753461/Captura_de_pantalla_2026-08-15_082117_dqowzo.png'
 

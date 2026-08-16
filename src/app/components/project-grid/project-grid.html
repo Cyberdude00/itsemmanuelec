@@ -1,14 +1,21 @@
 <div class="project-grid">
 
-  @for (
-    project of filteredProjects;
-    track project.title + $index
-  ) {
-
-    <app-project-card
-      [project]="project">
-    </app-project-card>
-
+  @if (expandedProject) {
+    <div class="expanded-project">
+      <app-project-card
+        [project]="expandedProject"
+        (closed)="closeProject()">
+      </app-project-card>
+    </div>
   }
+
+  <div class="project-list">
+    @for (project of getRemainingProjects(); track project.title + $index) {
+      <app-project-card
+        [project]="project"
+        (opened)="openProject(project)">
+      </app-project-card>
+    }
+  </div>
 
 </div>

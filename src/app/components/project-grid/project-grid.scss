@@ -1,18 +1,26 @@
 .project-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 10px;
-
-  align-items: start;
-
+  width: 100%;
   animation: gridEnter .5s ease both;
 }
 
-@keyframes gridEnter {
+/* MEDIA ABIERTA */
+.expanded-project {
+  width: 100%;
+  margin-bottom: 45px;
+}
 
+/* GRID DE MINIATURAS */
+.project-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+  align-items: start;
+}
+
+@keyframes gridEnter {
   from {
     opacity: 0;
     transform: translateY(8px);
@@ -22,26 +30,21 @@
     opacity: 1;
     transform: translateY(0);
   }
-
 }
-
 
 @media (max-width: 900px) {
-
-  .project-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .project-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 }
 
-
 @media (max-width: 600px) {
-
-  .project-grid {
+  .project-list {
     grid-template-columns: 1fr;
-
     gap: 3px;
   }
 
+  .expanded-project {
+    margin-bottom: 30px;
+  }
 }
