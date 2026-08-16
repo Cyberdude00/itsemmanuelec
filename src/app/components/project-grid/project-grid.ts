@@ -1,10 +1,6 @@
 
 
-
-
-
-
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList } from '@angular/core';
 
 import {
   Project,
@@ -143,8 +139,8 @@ export class ProjectGrid {
       media: [
         {
           type: 'video',
-          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Jordan_Gamma_2_dqejgw.jpg'          
-          //thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753461/Captura_de_pantalla_2026-08-15_082117_dqowzo.png'
+          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Jordan_Gamma_2_dqejgw.jpg',
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753461/Captura_de_pantalla_2026-08-15_082117_dqowzo.png'
 
         }
       ]
@@ -224,19 +220,40 @@ export class ProjectGrid {
   expandedProject: Project | null = null;
 
 
+  @ViewChildren(ProjectCard) cardComponents!: QueryList<ProjectCard>;
+
+
   openProject(project: Project): void {
+
+    // If the same project is already expanded, close it.
+    if (this.expandedProject === project) {
+      this.closeProject();
+      return;
+    }
+
+    // Close previously expanded project if any
+    if (this.expandedProject) {
+      const prev = this.cardComponents.find(c => c.project === this.expandedProject);
+      prev?.closeViewer();
+    }
+
     this.expandedProject = project;
 
+    // Allow DOM to update, then open the viewer on the matching card instance
     setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
+      const card = this.cardComponents.find(c => c.project === project);
+      card?.openViewer();
+    }, 0);
   }
 
 
   closeProject(): void {
+    if (!this.expandedProject) {
+      return;
+    }
+
+    const prev = this.cardComponents.find(c => c.project === this.expandedProject);
+    prev?.closeViewer();
     this.expandedProject = null;
   }
 

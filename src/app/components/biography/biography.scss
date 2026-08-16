@@ -4,43 +4,30 @@
 
 .bordered-title {
   border-top: 1px solid var(--border);
-
   text-align: center;
-
   position: relative;
 }
 
 .bordered-title span {
   position: relative;
-
   top: -8px;
-
   background: var(--white);
-
   padding: 0 14px;
-
   font-size: 13px;
-
   font-family: var(--font-title);
 }
 
 .biography-content {
   max-width: 760px;
-
-  margin: 65px auto 100px;
-
-  padding-inline: var(--page-padding);
-
+  margin: 65px auto;
+  padding-inline: 0px;
   text-align: center;
 }
 
 .bio-text {
   font-size: 14px;
-
   line-height: 1.45;
-
   font-family: var(--font-title);
-
   letter-spacing: .01em;
 }
 

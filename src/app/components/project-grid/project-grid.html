@@ -1,19 +1,12 @@
 <div class="project-grid">
 
-  @if (expandedProject) {
-    <div class="expanded-project">
-      <app-project-card
-        [project]="expandedProject"
-        (closed)="closeProject()">
-      </app-project-card>
-    </div>
-  }
-
   <div class="project-list">
-    @for (project of getRemainingProjects(); track project.title + $index) {
+    @for (project of filteredProjects; track project.title + $index) {
       <app-project-card
         [project]="project"
-        (opened)="openProject(project)">
+        [class.is-expanded]="expandedProject === project"
+        (requestOpen)="openProject(project)"
+        (closed)="closeProject()">
       </app-project-card>
     }
   </div>

@@ -4,7 +4,7 @@
 
   <div
     class="preview"
-    (click)="openViewer()">
+    (click)="isViewerOpen ? $event.stopPropagation() : notifyOpen($event)">
 
     <div class="media">
 
@@ -39,14 +39,46 @@
 
         }
 
-        @if (current.type === 'video') {
+            @if (current.type === 'video') {
 
-          <iframe
-            [src]="safeVideoUrl"
-            [title]="project.title"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+n          @if (current.url && /\.(mp4|webm|ogg|ogv)(\?.*)?$/.test(current.url)) {
+
+n            <video
+              #videoPlayer
+              controls
+              preload="metadata"
+              [attr.title]="project.title"
+              [src]="current.url"
+              (play)="onVideoPlay()"
+              (pause)="onVideoPause()"
+              (click)="$event.stopPropagation()">
+            </video>
+
+n            <!-- Play button (white triangle only). Stops propagation so click doesn't close the expanded view -->
+          @if (!isVideoPlaying) {
+            <button
+              type="button"
+              class="play-button"
+              (click)="playVideo($event)"
+              aria-label="Play">
+              <svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M2 1v32l24-16L2 1z" fill="#fff" />
+              </svg>
+            </button>
+          }
+
+n          } @else {
+
+n            <iframe
+              [src]="safeVideoUrl"
+              [title]="project.title"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              (click)="$event.stopPropagation()">
+            </iframe>
+
+n            <!-- If iframe-based player, no programmatic play control available here. -->
+          }
 
         }
 

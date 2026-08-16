@@ -3,13 +3,19 @@
   animation: gridEnter .5s ease both;
 }
 
-/* MEDIA ABIERTA */
-.expanded-project {
+/* GRID DE MINIATURAS */
+
+/* Expanded item becomes a grid item that spans all columns and is centered.
+   The visual expansion happens in-place (no modal, no fixed positioning).*/
+.project-list app-project-card.is-expanded {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-bottom: 45px;
+  padding: 16px 0; /* keep some breathing room */
 }
 
-/* GRID DE MINIATURAS */
 .project-list {
   width: 100%;
 
@@ -42,9 +48,5 @@
   .project-list {
     grid-template-columns: 1fr;
     gap: 3px;
-  }
-
-  .expanded-project {
-    margin-bottom: 30px;
   }
 }
