@@ -11,81 +11,44 @@
       @if (!isViewerOpen) {
 
         @if (current.type === 'image') {
-
           <img
             [src]="current.url"
             [alt]="project.title"
             loading="lazy">
-
         }
 
         @if (current.type === 'video') {
-
           <img
             class="video-thumbnail"
             [src]="current.thumbnail || getBunnyThumbnail(current.url)"
             [alt]="project.title"
             loading="lazy">
-
         }
 
       } @else {
 
         @if (current.type === 'image') {
-
           <img
             [src]="current.url"
             [alt]="project.title">
-
         }
 
-            @if (current.type === 'video') {
-
-n          @if (current.url && /\.(mp4|webm|ogg|ogv)(\?.*)?$/.test(current.url)) {
-
-n            <video
-              #videoPlayer
-              controls
-              preload="metadata"
-              [attr.title]="project.title"
-              [src]="current.url"
-              (play)="onVideoPlay()"
-              (pause)="onVideoPause()"
-              (click)="$event.stopPropagation()">
-            </video>
-
-n            <!-- Play button (white triangle only). Stops propagation so click doesn't close the expanded view -->
-          @if (!isVideoPlaying) {
-            <button
-              type="button"
-              class="play-button"
-              (click)="playVideo($event)"
-              aria-label="Play">
-              <svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M2 1v32l24-16L2 1z" fill="#fff" />
-              </svg>
-            </button>
-          }
-
-n          } @else {
-
-n            <iframe
-              [src]="safeVideoUrl"
-              [title]="project.title"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              (click)="$event.stopPropagation()">
-            </iframe>
-
-n            <!-- If iframe-based player, no programmatic play control available here. -->
-          }
-
+        @if (current.type === 'video') {
+          <video
+            #videoPlayer
+            controls
+            preload="metadata"
+            [src]="current.url"
+            [attr.title]="project.title"
+            (play)="onVideoPlay()"
+            (pause)="onVideoPause()"
+            (click)="$event.stopPropagation()">
+          </video>
         }
 
       }
 
     </div>
-
 
     @if (!isViewerOpen) {
 
@@ -98,17 +61,26 @@ n            <!-- If iframe-based player, no programmatic play control available
           </h3>
 
           @if (project.subtitle) {
-
             <span>
               {{ project.subtitle }}
             </span>
-
           }
 
         </div>
 
-      </div>
+        @if (current.type === 'video') {
+          <span class="fake-play">
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path
+                d="M8 5v14l11-7z"
+                fill="white"/>
+            </svg>
+          </span>
+        }
 
+      </div>
 
       @if (project.media.length > 1) {
 
@@ -117,22 +89,16 @@ n            <!-- If iframe-based player, no programmatic play control available
           class="carousel-button previous"
           (click)="previous($event)"
           aria-label="Previous">
-
           ‹
-
         </button>
-
 
         <button
           type="button"
           class="carousel-button next"
           (click)="next($event)"
           aria-label="Next">
-
           ›
-
         </button>
-
 
         <div class="carousel-dots">
 
@@ -158,7 +124,6 @@ n            <!-- If iframe-based player, no programmatic play control available
 
   </div>
 
-
   @if (isViewerOpen) {
 
     <div class="expanded-info">
@@ -170,24 +135,19 @@ n            <!-- If iframe-based player, no programmatic play control available
         </h2>
 
         @if (project.subtitle) {
-
           <span>
             {{ project.subtitle }}
           </span>
-
         }
 
       </div>
-
 
       <button
         type="button"
         class="viewer-close"
         (click)="closeViewer()"
         aria-label="Close">
-
         ×
-
       </button>
 
     </div>

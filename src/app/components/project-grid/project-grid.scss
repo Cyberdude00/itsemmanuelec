@@ -3,28 +3,34 @@
   animation: gridEnter .5s ease both;
 }
 
-/* GRID DE MINIATURAS */
+.project-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
 
-/* Expanded item becomes a grid item that spans all columns and is centered.
-   The visual expansion happens in-place (no modal, no fixed positioning).*/
 .project-list app-project-card.is-expanded {
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px 0; /* keep some breathing room */
+  padding: 16px 0;
 }
 
-.project-list {
+.preview {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
   width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 10px;
-  align-items: start;
+  height: 100%;
 }
+
 
 @keyframes gridEnter {
   from {

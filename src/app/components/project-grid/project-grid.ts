@@ -26,8 +26,7 @@ export class ProjectGrid {
       media: [
         {
           type: 'video',
-          url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753468/Captura_de_pantalla_2026-08-15_082251_fmd89y.png',
-          //url: 'https://player.mediadelivery.net/play/727165/c4ad171d-d3bc-4533-a015-9296d61e558a',
+          url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786886051/RELEASE_FINAL_FINAL_rtfkny.mov',
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753468/Captura_de_pantalla_2026-08-15_082251_fmd89y.png'
         }
       ]
@@ -41,7 +40,6 @@ export class ProjectGrid {
         {
           type: 'video',
           url: '//res.cloudinary.com/djpi5yzlu/video/upload/v1786699855/falling1_ksmsbo.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/7d3c49f2-ad51-46a6-bdbb-b99e81e6a5cf',
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753465/Captura_de_pantalla_2026-08-15_082335_txjk3m.png'
         }
       ]
@@ -53,8 +51,7 @@ export class ProjectGrid {
       media: [
         {
           type: 'video',
-          url:'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753467/Captura_de_pantalla_2026-08-15_082312_tsbetj.png',          
-          //url: 'https://player.mediadelivery.net/play/727165/7156e9a1-c8e3-4f56-8396-6d647a2fcf01',
+          url:'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786886093/VID-20250816-WA0019_wavzlm.mp4',          
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753467/Captura_de_pantalla_2026-08-15_082312_tsbetj.png'
         }
       ]
@@ -77,8 +74,7 @@ export class ProjectGrid {
     media: [
       {
         type: 'video',
-        url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_082000_bjlsya.png',
-        //url: 'https://player.mediadelivery.net/play/727165/d1d1911a-f2bd-486c-8d2b-c6de2338bb1d',
+        url:'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786886256/Alexander_Wang_FW_1_iktyei.mp4',          
         thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_082000_bjlsya.png'
       }
     ]
@@ -116,7 +112,6 @@ export class ProjectGrid {
         {
           type: 'image',
           url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699823/Jordan_Pearl_4_dsjrj3.jpg',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699823/Jordan_Pearl_4_dsjrj3.jpg'
         }
       ]
     },
@@ -135,12 +130,12 @@ export class ProjectGrid {
     {
       title: 'JORDAN',
       subtitle: 'GAMMA',
-      category: 'Film',
+      category: 'Campaign',
       media: [
         {
-          type: 'video',
+          type: 'image',
           url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786699821/Jordan_Gamma_2_dqejgw.jpg',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753461/Captura_de_pantalla_2026-08-15_082117_dqowzo.png'
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786800242/Captura_de_pantalla_2026-08-15_212300_w4glmh.png'
 
         }
       ]
@@ -149,11 +144,10 @@ export class ProjectGrid {
     {
       title: 'JORDAN ',
       subtitle: 'GAMMA',
-      category: 'Commercial',
+      category: 'Campaign',
       media: [
         {
           type: 'video',
-          //url: 'https://player.mediadelivery.net/play/727165/6a7e7d70-497f-4969-a5b6-3c91fbf11d50',
           url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699823/Jordan_Gamma_1_ul4r50.mp4',
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786800245/Captura_de_pantalla_2026-08-15_212323_tc3qbo.png' 
         }
@@ -167,9 +161,9 @@ export class ProjectGrid {
       category: 'Campaign',
       media: [
         {
-          type: 'video',
+          type: 'image',
           url: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753464/Captura_de_pantalla_2026-08-15_082158_ux2fow.png',
-          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753464/Captura_de_pantalla_2026-08-15_082158_ux2fow.png' 
+          thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753464/Captura_de_pantalla_2026-08-15_082158_ux2fow.png'
         }
       ]
     },
@@ -181,7 +175,6 @@ export class ProjectGrid {
         {
           type: 'video',
           url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699841/MOFT_3_ae9fig.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_081740_xr7ezk.png'
         }
       ]
@@ -194,7 +187,6 @@ export class ProjectGrid {
         {
           type: 'video',
           url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699831/MOFT_1_znc7sa.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786753463/Captura_de_pantalla_2026-08-15_081715_awn4am.png'
         }
       ]
@@ -207,7 +199,6 @@ export class ProjectGrid {
         {
           type: 'video',
           url: 'https://res.cloudinary.com/djpi5yzlu/video/upload/v1786699831/MOFT_2_olroqz.mp4',
-          //url: 'https://player.mediadelivery.net/play/727165/5161f738-a200-42a9-8851-51b0c3021bea',
           thumbnail: 'https://res.cloudinary.com/djpi5yzlu/image/upload/v1786763700/Captura_de_pantalla_2026-08-15_091933_qkz3ph.png'
         }
       ]
