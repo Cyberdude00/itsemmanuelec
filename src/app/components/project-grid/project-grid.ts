@@ -59,7 +59,7 @@ export class ProjectGrid {
     {
     title: 'ALEXANDER WANG',
     subtitle: 'FW',
-    category: 'Film',
+    category: 'Commercial',
     media: [
       {
         type: 'image',
@@ -70,7 +70,7 @@ export class ProjectGrid {
     {
     title: 'ALEXANDER WANG',
     subtitle: 'FW',
-    category: 'Campaign',
+    category: 'Commercial',
     media: [
       {
         type: 'video',
@@ -82,7 +82,7 @@ export class ProjectGrid {
     {
     title: 'ALEXANDER WANG',
     subtitle: 'FW',
-    category: 'Film',
+    category: 'Commercial',
     media: [
         {
           type: 'image',
@@ -94,7 +94,7 @@ export class ProjectGrid {
     {
       title: 'NIKE',
       subtitle: 'PEARL',
-      category: 'Campaign',
+      category: 'Commercial',
       media: [
         {
           type: 'image',
@@ -107,7 +107,7 @@ export class ProjectGrid {
     {
       title: 'NIKE',
       subtitle: 'PEARL',
-      category: 'Campaign',
+      category: 'Commercial',
       media: [
         {
           type: 'image',
@@ -118,7 +118,7 @@ export class ProjectGrid {
     {
       title: 'NIKE',
       subtitle: 'PEARL',
-      category: 'Campaign',
+      category: 'Commercial',
       media: [
         {
           type: 'image',
@@ -130,7 +130,7 @@ export class ProjectGrid {
     {
       title: 'JORDAN',
       subtitle: 'GAMMA',
-      category: 'Campaign',
+      category: 'Commercial',
       media: [
         {
           type: 'image',
@@ -144,7 +144,7 @@ export class ProjectGrid {
     {
       title: 'JORDAN ',
       subtitle: 'GAMMA',
-      category: 'Campaign',
+      category: 'Commercial',
       media: [
         {
           type: 'video',
@@ -158,7 +158,7 @@ export class ProjectGrid {
     {
       title: 'JORDAN',
       subtitle: 'GAMMA',
-      category: 'Campaign',
+      category: 'Commercial',
       media: [
         {
           type: 'image',
@@ -170,7 +170,7 @@ export class ProjectGrid {
     {
       title: 'SHEIN',
       subtitle: 'MOTF',
-      category: 'Film',
+      category: 'Commercial',
       media: [
         {
           type: 'video',
@@ -182,7 +182,7 @@ export class ProjectGrid {
         {
       title: 'SHEIN',
       subtitle: 'MOTF',
-      category: 'Film',
+      category: 'Commercial',
       media: [
         {
           type: 'video',
@@ -194,7 +194,7 @@ export class ProjectGrid {
       {
       title: 'SHEIN',
       subtitle: 'MOTF',
-      category: 'Film',
+      category: 'Commercial',
       media: [
         {
           type: 'video',

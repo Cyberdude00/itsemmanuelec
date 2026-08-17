@@ -27,9 +27,11 @@
     </li>
 
     <li>
-      <a href="#biography">
-        Biography
-      </a>
+      <button
+        [class.active]="active === 'editorial'"
+        (click)="filter('editorial')">
+        Editorial
+      </button>
     </li>
 
     <li>
