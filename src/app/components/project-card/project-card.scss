@@ -371,6 +371,12 @@
 }
 
 
+@media (max-width: 600px) {
+  .fake-play,
+  .play-button {
+    display: none !important;
+  }
+}
 
 .fake-play svg {
   width: 20px;
