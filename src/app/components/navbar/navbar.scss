@@ -5,26 +5,33 @@
   padding: 40px 0 10px;
 }
 
-.main-menu {
+.header-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
   gap: clamp(20px, 8vw, 100px);
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 4vw, 60px);
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .main-menu a,
-.main-menu .name {
+.site-title a {
   font-family: var(--font-title);
   text-transform: uppercase;
-  letter-spacing: .01em;
+  text-decoration: none;
   white-space: nowrap;
 }
 
 .main-menu a {
   font-size: clamp(11px, 1.2vw, 15px);
+  color: var(--black);
   transition: opacity .3s ease;
 }
 
@@ -32,9 +39,10 @@
   opacity: .45;
 }
 
-.name {
+.site-title a {
   color: var(--black);
   font-size: clamp(22px, 2.5vw, 32px);
+  letter-spacing: .01em;
 }
 
 .logo-muted {
@@ -55,37 +63,59 @@
   letter-spacing: .01em;
 }
 
-.mobile-header {
-  display: none;
+/* Hamburguesa oculta por defecto */
+.menu-trigger {
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 45px;
+  transform: none;
+  z-index: 300;
 }
 
+.menu-trigger span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--black);
+  margin: 4px 0;
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
 
   .main-header {
     padding: 18px 0 10px;
   }
 
+  .header-row {
+    position: relative;
+    justify-content: center;
+    gap: 0;
+  }
+
   .desktop-menu {
     display: none;
   }
 
-  .mobile-header {
-    display: flex;
-    justify-content: center;
+  .site-title {
+    display: block;
+  }
+
+  .site-title a {
+    font-size: 24px;
   }
 
   .menu-trigger {
-    font-family: var(--font-title);
-    font-size: 13px;
-    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 45px;
+    transform: none;
+    z-index: 300;
     background: none;
     border: 0;
     padding: 0;
-    transition: opacity .3s ease;
-  }
-
-  .menu-trigger:hover {
-    opacity: .45;
   }
 
   .bottom-row {

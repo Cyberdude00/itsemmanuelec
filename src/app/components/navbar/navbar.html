@@ -1,50 +1,50 @@
 <header class="main-header">
   <div class="capped">
 
-    <div class="desktop-menu">
-      <ul class="main-menu">
+    <div class="header-row">
 
-        <li>
-          <a href="#work">Work</a>
-        </li>
+      <div class="desktop-menu">
+        <ul class="main-menu">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#biography">Biography</a></li>
+        </ul>
+      </div>
 
-      <li>
-          <a href="#biography">Biography</a>
-        </li>
-
-        <li class="name">
+      <div class="site-title">
+        <a href="/" aria-label="It's Emmanuelec">
           <span class="logo-muted">its</span> emmanuel <span class="logo-muted">ec</span>
-        </li>
+        </a>
+      </div>
 
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+      <div class="desktop-menu">
+        <ul class="main-menu">
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/itsemmanuelec/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Socials
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <li>
-          <a
-            href="https://www.instagram.com/itsemmanuelec/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Socials
-          </a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="mobile-header">
       <button
         type="button"
         class="menu-trigger"
+        aria-label="Open menu"
+        [attr.aria-expanded]="menuOpen"
         (click)="toggleMenu()">
-        Menu
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </div>
 
     <div class="bottom-row">
-      <span class="location">
-        MX | NY
-      </span>
+      <span class="location">MX | NY</span>
     </div>
 
   </div>
